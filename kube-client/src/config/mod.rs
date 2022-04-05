@@ -195,20 +195,27 @@ impl Config {
         let cluster_url = if cfg!(feature = "rustls-tls") {
             // try rolling out new method for rustls which does not support ip based urls anyway
             // see https://github.com/kube-rs/kube-rs/issues/587
+            println!("kube_dns 1");
             incluster_config::kube_server()?
         } else {
+            println!("kube_server 2");
             incluster_config::kube_server()?
         };
 
         let default_namespace = incluster_config::load_default_ns()?;
+
+        println!("load_default_ns 3");
+
         let root_cert = incluster_config::load_cert()?;
 
+        println!("load_cert 4");
+        
         Ok(Self {
             cluster_url,
             default_namespace,
             root_cert: Some(root_cert),
             timeout: Some(DEFAULT_TIMEOUT),
-            accept_invalid_certs: false,
+            accept_invalid_certs: true, //false
             auth_info: AuthInfo {
                 token_file: Some(incluster_config::token_file()),
                 ..Default::default()
