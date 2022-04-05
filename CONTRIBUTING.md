@@ -13,7 +13,7 @@ More information about `DCO` can be found [here](https://developercertificate.or
 All code that is contributed to kube-rs must go through the Pull Request (PR) process.
 To contribute a PR, fork this project, create a new branch, make changes on that branch, and then use GitHub to open a pull request with your changes.
 
-Every PR must be reviewed by at least one [Maintainer](./maintainers.md) of the project.
+Every PR must be reviewed by at least one [Maintainer](https://kube.rs/maintainers/) of the project.
 Once a PR has been marked "Approved" by a Maintainer (and no other Maintainer has an open "Rejected" vote), the PR may be merged.
 While it is fine for non-maintainers to contribute their own code reviews, those reviews do not satisfy the above requirement.
 
@@ -29,7 +29,7 @@ Conduct](https://github.com/cncf/foundation/blob/master/code-of-conduct.md).
 - **Documentation** To check documentation, run `make doc`
 - **Testing**: To run tests, run `make test` and see below.
 
-For a list of tooling that we glue together everything see [TOOLS.md](https://github.com/kube-rs/.github/blob/main/TOOLS.md).
+For a list of tooling that we glue together everything see [TOOLS.md](https://kube.rs/tools/).
 
 ## Testing
 
@@ -75,7 +75,7 @@ All public interfaces should have doc tests with examples for [docs.rs](https://
 
 When adding new non-trivial pieces of logic that results in a drop in coverage you should add a test.
 
-Cross-reference with the coverage build [![coverage build](https://codecov.io/gh/kube-rs/kube-rs/branch/master/graph/badge.svg?token=9FCqEcyDTZ)](https://codecov.io/gh/kube-rs/kube-rs) and go to your branch. Coverage can also be run locally with [`cargo tarpaulin`](https://github.com/xd009642/tarpaulin) at project root. This will use our [tarpaulin.toml](./tarpaulin.toml) config, and **will run both unit and integration** tests.
+Cross-reference with the coverage build [![coverage build](https://codecov.io/gh/kube-rs/kube-rs/branch/master/graph/badge.svg?token=9FCqEcyDTZ)](https://codecov.io/gh/kube-rs/kube-rs) and go to your branch. Coverage can also be run locally with [`cargo tarpaulin`](https://github.com/xd009642/tarpaulin) at project root. This will use our [tarpaulin.toml](https://github.com/kube-rs/kube-rs/blob/master/tarpaulin.toml) config, and **will run both unit and integration** tests.
 
 #### What type of test
 
@@ -95,7 +95,7 @@ In general: **use the least powerful method** of testing available to you:
 
 ## Support
 ### Documentation
-The [high-level architecture document](./architecture.md) is written for contributors.
+The [high-level architecture document](https://kube.rs/architecture/) is written for contributors.
 
 ### Contact
 You can ask general questions / share ideas / query the community at the [kube-rs discussions forum](https://github.com/kube-rs/kube-rs/discussions).
