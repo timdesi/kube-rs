@@ -199,7 +199,7 @@ impl Config {
             // try rolling out new method for rustls which does not support ip based urls anyway
             // see https://github.com/kube-rs/kube-rs/issues/587
             println!("kube_dns 1");
-            incluster_config::kube_server()?
+            incluster_config::kube_dns()
         } else {
             println!("kube_server 2");
             incluster_config::kube_server()?
