@@ -195,7 +195,6 @@ impl Config {
         
         println!("from_cluster_env 0");
         
-        /*
         let cluster_url = if cfg!(feature = "rustls-tls") {
             // try rolling out new method for rustls which does not support ip based urls anyway
             // see https://github.com/kube-rs/kube-rs/issues/587
@@ -205,10 +204,7 @@ impl Config {
             println!("kube_server 2");
             incluster_config::kube_server()?
         };
-        */
-
-        let cluster_url = incluster_config::kube_server()?;
-
+        
         println!("kube_server 2");
 
         let default_namespace = incluster_config::load_default_ns()?;
